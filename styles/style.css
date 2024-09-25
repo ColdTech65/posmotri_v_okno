@@ -96,6 +96,12 @@ ol {
   gap: 6px;
 }
 
+.content__video-card-description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .content__accent {
   color: #545050;
 }
@@ -111,6 +117,9 @@ ol {
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .result__video-container {
@@ -118,11 +127,12 @@ ol {
   inline-size: 711px;
   block-size: 393px;
   margin-top: 78px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .result__video {
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -266,17 +276,27 @@ ol {
   outline: none;
 }
 
+.content__card-link:focus .content__video-card {
+  outline: 1px solid #fff;
+  outline-offset: -1px;
+}
+
 .content__card-link_current .content__video-card {
+  outline: 1px solid #fff;
+  outline-offset: -1px;
   background-color: #545050;
 }
 
 .button:active {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
   background: #545050;
 }
 
 .button:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.button:focus {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
